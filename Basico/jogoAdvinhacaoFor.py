@@ -11,9 +11,13 @@ total_de_tentativas = 3
 #     print(contador)
 for rodada in range(0, total_de_tentativas):
     print("### Tentativa {} de {} ###".format(rodada + 1, total_de_tentativas))
-    chute_string = input("Digite o seu numero: ")
+    chute_string = input("Digite um número entre 1 e 100: ")
     print("Você digitou", chute_string)
     chute = int(chute_string)
+
+    if (chute < 1 or chute > 100):
+        print("Você deve digitar um número entre 1 e 100!")
+        continue # ele apenas sai da interação e volta pra proxima rodada 
 
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
@@ -21,6 +25,7 @@ for rodada in range(0, total_de_tentativas):
 
     if (acertou):
         print(">>Você acertou!<<", end="\n\n")
+        break # Ele para o For
     elif (maior):
         print(">>Você errou! O seu chute foi maior do que o numero secreto!<<", end="\n\n")
     elif(menor):
