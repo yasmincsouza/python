@@ -8,10 +8,6 @@ print("*******************************", end="\n\n")
 numero_secreto = random.randrange(1, 101) # Gera um numero aleatorio nos intervalos
 total_de_tentativas = 3
 
-# range(start, stop, [step])
-# Onde o step é opcional. Como queremos "pular" de 3 em 3, começando com 1 (start) até 10 (stop)
-# for contador in range(1,11,3): 
-#     print(contador)
 for rodada in range(0, total_de_tentativas):
     print("### Tentativa {} de {} ###".format(rodada + 1, total_de_tentativas))
     chute_string = input("Digite um número entre 1 e 100: ")
@@ -20,7 +16,7 @@ for rodada in range(0, total_de_tentativas):
 
     if (chute < 1 or chute > 100):
         print("Você deve digitar um número entre 1 e 100!")
-        continue # ele apenas sai da interação e volta pra proxima rodada 
+        continue 
 
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
@@ -28,7 +24,7 @@ for rodada in range(0, total_de_tentativas):
 
     if (acertou):
         print(">>Você acertou!<<", end="\n\n")
-        break # Ele para o For
+        break 
     elif (maior):
         print(">>Você errou! O seu chute foi maior do que o numero secreto!<<", end="\n\n")
     elif(menor):
