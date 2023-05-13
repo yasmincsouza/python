@@ -9,7 +9,7 @@ total_de_tentativas = 3
 # Onde o step é opcional. Como queremos "pular" de 3 em 3, começando com 1 (start) até 10 (stop)
 # for contador in range(1,11,3): 
 #     print(contador)
-for rodada in range(0, total_de_tentativas):
+for rodada in range(0, total_de_tentativas): # retorna um conjunto de números sequenciais
     print("### Tentativa {} de {} ###".format(rodada + 1, total_de_tentativas))
     chute_string = input("Digite um número entre 1 e 100: ")
     print("Você digitou", chute_string)
