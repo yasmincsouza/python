@@ -4,7 +4,7 @@ def jogar():
     print("*********************************")
 
     palavra_secreta = "maça".upper()
-    letras_acertadas = ["_" for letra in palavra_secreta]
+    letras_acertadas = ["_" for letra in palavra_secreta] # adiciona de acordo com o tamanho da palavra
 
     enforcou = False
     acertou = False
@@ -26,8 +26,9 @@ def jogar():
         else:
             erros += 1
 
-        enforcou = erros == 6
-        acertou = "_" not in letras_acertadas
+        enforcou = erros == 6 # ao executarmos o jogo e errar 6 vezes o jogo é encerrado
+        # ao retornar true o jogo encerra
+        acertou = "_" not in letras_acertadas # enquanto a lista possui o "_"
         print(letras_acertadas)
 
 
