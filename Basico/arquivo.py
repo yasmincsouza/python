@@ -4,13 +4,13 @@ print(arquivo.write("banana\n"))
 print(arquivo.write("melancia\n"))
 arquivo.close()
 
-arquivo = open("palavras.txt", "a")
+# arquivo = open("palavras.txt", "a")
 print(arquivo.write("morango\n"))
 print(arquivo.write("manga\n"))
 
 # o modificador b que devemos utilizar quando queremos 
 # trabalhar no modo binário. Para abrir uma imagem devemos usar
-imagem = open("foto.jpg", "rb")
+# imagem = open("foto.jpg", "rb")
 
 # arquivo copia.py
 # cria uma cópia de uma imagem
