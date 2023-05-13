@@ -12,7 +12,7 @@ def escolhe_jogo():
 
     if(jogo == 1):
         print("Jogando forca")
-        forca.jogar()
+        forcaFinal.jogar()
     elif(jogo == 2):
         print("jogando Adivinhação")
         jogoAdvinhacaoPontuacao.jogar()
